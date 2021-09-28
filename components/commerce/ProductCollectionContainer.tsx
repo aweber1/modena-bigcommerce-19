@@ -1,5 +1,5 @@
 import styles from './styles/product-detail.module.scss';
-import { Slot } from '@uniformdev/upm-react';
+import { Slot } from '@uniformdev/canvas-react';
 
 const ProductCollectionContainer: React.FC<any> = ({ tag, heading }) => {
   return (

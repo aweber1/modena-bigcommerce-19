@@ -40,3 +40,5 @@ yarn-error.log*
 .netlify
 /dist
 /storybook-static
+
+yarn.lock

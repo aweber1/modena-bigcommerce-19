@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { RootComponentInstance } from '@uniformdev/upm';
+import { RootComponentInstance } from '@uniformdev/canvas';
 import { RefObject } from 'react';
 import dynamic from 'next/dynamic';
 const ReactJson = dynamic(() => import('react-json-view'), { ssr: false });

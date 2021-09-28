@@ -3,11 +3,11 @@ import { GetStaticPaths, GetStaticPropsContext } from 'next';
 import Head from 'next/head';
 import getConfig from 'next/config';
 import dynamic from 'next/dynamic';
-import { RootComponentInstance, UPM_DRAFT_STATE, UPM_PUBLISHED_STATE } from '@uniformdev/upm';
+import { RootComponentInstance, UPM_DRAFT_STATE, UPM_PUBLISHED_STATE } from '@uniformdev/canvas';
 import { enhancers } from 'lib/enhancers';
-import { enhance } from '@uniformdev/upm';
+import { enhance } from '@uniformdev/canvas';
 import { upmClient } from 'lib/upmClient';
-import { Composition, Slot } from '@uniformdev/upm-react';
+import { Composition, Slot } from '@uniformdev/canvas-react';
 import { resolveRenderer } from 'components/composableComponents';
 
 const PreviewDevPanel = dynamic(() => import('lib/preview/PreviewDevPanel/PreviewDevPanel'));

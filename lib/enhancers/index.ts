@@ -1,12 +1,12 @@
-import { compose, EnhancerBuilder } from '@uniformdev/upm';
+import { compose, EnhancerBuilder } from '@uniformdev/canvas';
 import getConfig from 'next/config';
 
-import { UPM_CONTENTFUL_PARAMETER_TYPES } from '@uniformdev/upm-contentful';
+import { UPM_CONTENTFUL_PARAMETER_TYPES } from '@uniformdev/canvas-contentful';
 import { contentfulEnhancer } from './contentful/contentfulEnhancer';
 import { contentfulModelConverter } from './contentful/contentfulModelConverter';
 
 import { bigCommerceEnhancer } from './bigcommerce/bigCommerceEnhancer';
-import { UPM_BIGCOMMERCE_PARAMETER_TYPES } from '@uniformdev/upm-bigcommerce';
+import { UPM_BIGCOMMERCE_PARAMETER_TYPES } from '@uniformdev/canvas-bigcommerce';
 
 import { bigCommerceModelConverter } from './bigcommerce/bigCommerceModelConverter';
 

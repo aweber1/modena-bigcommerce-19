@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { useCallback } from 'react';
-import { useCompositionEventEffect, UseCompositionEventEffectOptions } from '@uniformdev/upm-react';
+import { useCompositionEventEffect, UseCompositionEventEffectOptions } from '@uniformdev/canvas-react';
 
 type UseLivePreviewNextStaticPropsOptions = Omit<UseCompositionEventEffectOptions, 'effect' | 'enabled'>;
 

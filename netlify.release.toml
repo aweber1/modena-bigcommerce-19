@@ -17,6 +17,8 @@
 
   BIGCOMMERCE_STORE_HASH='Store hash from BigCommerce'
   BIGCOMMERCE_TOKEN='API token from BigCommerce'
+
+  NPM_TOKEN='NPM Token for Uniform packages'
   
 # Stores the next cache between builds for faster build time
 [[plugins]]

@@ -1,4 +1,4 @@
-import { RootComponentInstance } from '@uniformdev/upm';
+import { RootComponentInstance } from '@uniformdev/canvas';
 
 import CompositionPreview from './CompositionPreview/CompositionPreview';
 import PreviewEnabler from './PreviewEnabler';

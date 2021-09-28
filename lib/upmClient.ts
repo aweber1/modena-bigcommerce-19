@@ -1,4 +1,4 @@
-import { UpmClient } from '@uniformdev/upm';
+import { UpmClient } from '@uniformdev/canvas';
 import getConfig from 'next/config';
 
 const {

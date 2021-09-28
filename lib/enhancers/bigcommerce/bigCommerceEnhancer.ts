@@ -1,5 +1,5 @@
 import getConfig from 'next/config';
-import { createBigCommerceClient, createBigCommerceEnhancer } from '@uniformdev/upm-bigcommerce';
+import { createBigCommerceClient, createBigCommerceEnhancer } from '@uniformdev/canvas-bigcommerce';
 
 const { serverRuntimeConfig } = getConfig();
 const { bigCommerceStoreHash, bigCommerceToken } = serverRuntimeConfig;

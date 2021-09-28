@@ -1,5 +1,5 @@
 import getConfig from 'next/config';
-import { createContentfulEnhancer } from '@uniformdev/upm-contentful';
+import { createContentfulEnhancer } from '@uniformdev/canvas-contentful';
 import { createClient } from 'contentful';
 
 const { serverRuntimeConfig } = getConfig();

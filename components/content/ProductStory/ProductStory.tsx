@@ -1,5 +1,5 @@
 import styles from './ProductStory.module.scss';
-import { ComponentProps } from '@uniformdev/upm-react';
+import { ComponentProps } from '@uniformdev/canvas-react';
 import Image from 'next/image';
 
 type StoryBlockProps = ComponentProps<{

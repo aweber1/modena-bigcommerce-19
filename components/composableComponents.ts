@@ -1,6 +1,6 @@
 import { ComponentType } from 'react';
-import { ComponentInstance } from '@uniformdev/upm';
-import { DefaultNotImplementedComponent, ComponentProps } from '@uniformdev/upm-react';
+import { ComponentInstance } from '@uniformdev/canvas';
+import { DefaultNotImplementedComponent, ComponentProps } from '@uniformdev/canvas-react';
 
 import { Hero, ProductStory, ProductSpecs } from '@/components/content';
 
