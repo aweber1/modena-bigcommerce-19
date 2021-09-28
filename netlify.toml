@@ -1,6 +1,24 @@
 [build]
-  publish = "out/"
-  command = "yarn yolo"
+  publish = "out"
+  command = "yarn ci:build"
+
+[template]
+  incoming-hooks = ["Uniform"]
+
+[template.environment]
+  UNIFORM_PROJECT_ID='Uniform project Id'
+  UNIFORM_API_KEY='Uniform API Key'
+
+  CONTENTFUL_SPACE_ID = 'Contentful Space ID'
+  CONTENTFUL_ENVIRONMENT = 'Contentful Environment'
+  CONTENTFUL_CDA_ACCESS_TOKEN = 'Contentful Delivery API Key'
+  CONTENTFUL_CPA_ACCESS_TOKEN = 'Contentful Preview API Key'
+  GA_UA_ID='Google Analytics ID (optional)'
+
+  BIGCOMMERCE_STORE_HASH='Store hash from BigCommerce'
+  BIGCOMMERCE_TOKEN='API token from BigCommerce'
+
+  NPM_TOKEN='NPM Token for Uniform packages'
 
 [[headers]]
   for = "*.css"
@@ -15,31 +33,35 @@
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
+# Stores the next cache between builds for faster build time
 [[plugins]]
-package = "netlify-plugin-subfont"
+  package = "netlify-plugin-cache-nextjs"
 
-  [plugins.inputs]
-  # An array of glob patterns for pages on your site
-  # Recursive traversal will start from these
-  entryPoints = [
-    "*.html",
-  ]
+[[plugins]]
+  package = "netlify-plugin-subfont"
 
-  # Follow your links across all pages to optimize the fonts across the entire site
-  recursive = true
+    [plugins.inputs]
+    # An array of glob patterns for pages on your site
+    # Recursive traversal will start from these
+    entryPoints = [
+      "*.html",
+    ]
 
-  # Subfont lets you set CSS font-display value of the optimized subsets
-  # See https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display
-  fontDisplay = "swap"
+    # Follow your links across all pages to optimize the fonts across the entire site
+    recursive = true
 
-  # Inline generated CSS @font-face blocks into each page
-  # When set to `false` an external CSS file will be created
-  inlineCss = true
+    # Subfont lets you set CSS font-display value of the optimized subsets
+    # See https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display
+    fontDisplay = "swap"
 
-  # Inline generated font subsets into their respective @font-face blocks
-  # When set to `false` external font files will be created
-  inlineFonts = true
+    # Inline generated CSS @font-face blocks into each page
+    # When set to `false` an external CSS file will be created
+    inlineCss = true
 
-  # Include fallbacks so the original font will be loaded when dynamic content gets injected at runtime
-  # When set to `false` external font files will be created
-  fallbacks = false
+    # Inline generated font subsets into their respective @font-face blocks
+    # When set to `false` external font files will be created
+    inlineFonts = true
+
+    # Include fallbacks so the original font will be loaded when dynamic content gets injected at runtime
+    # When set to `false` external font files will be created
+    fallbacks = false
