@@ -3,10 +3,10 @@ import { GetStaticPaths, GetStaticPropsContext } from 'next';
 import Head from 'next/head';
 import getConfig from 'next/config';
 import dynamic from 'next/dynamic';
-import { RootComponentInstance, UPM_DRAFT_STATE, UPM_PUBLISHED_STATE } from '@uniformdev/canvas';
+import { RootComponentInstance, CANVAS_DRAFT_STATE, CANVAS_PUBLISHED_STATE } from '@uniformdev/canvas';
 import { enhancers } from 'lib/enhancers';
 import { enhance } from '@uniformdev/canvas';
-import { upmClient } from 'lib/upmClient';
+import { canvasClient } from 'lib/canvasClient';
 import { Composition, Slot } from '@uniformdev/canvas-react';
 import { resolveRenderer } from 'components/composableComponents';
 
@@ -49,12 +49,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
     publicRuntimeConfig: { previewEnabled },
   } = getConfig();
 
-  const pages = await upmClient.getCompositionList({
+  const pages = await canvasClient.getCompositionList({
     skipEnhance: true,
     state:
       process.env.NODE_ENV === 'development' || previewEnabled === 'true'
-        ? UPM_DRAFT_STATE
-        : UPM_PUBLISHED_STATE,
+        ? CANVAS_DRAFT_STATE
+        : CANVAS_PUBLISHED_STATE,
   });
 
   // IMPORTANT: setting fallback to 'true' breaks on Netlify
@@ -75,9 +75,9 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     publicRuntimeConfig: { previewEnabled },
   } = getConfig();
 
-  const apiResult = await upmClient.getCompositionBySlug({
+  const apiResult = await canvasClient.getCompositionBySlug({
     slug: `/${slugString}`,
-    state: process.env.NODE_ENV === 'development' || preview ? UPM_DRAFT_STATE : UPM_PUBLISHED_STATE,
+    state: process.env.NODE_ENV === 'development' || preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
     skipEnhance: true,
   });
 

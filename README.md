@@ -34,17 +34,17 @@ The project is enabled for edge-side personalization and A/B testing, however it
    
    1. Create an API key for the CLI with wider permissions (must check all checkboxes under `Uniform Presentation Manager`)
    
-   1. Set the `UPM_CLI_API_KEY` env var with this value.
+   1. Set the `CANVAS_CLI_API_KEY` env var with this value.
 1. Perform publish of optimize manifest by clicking the **Publish** button from your project's Personalization tab.
 1. Copy `.env.example` as `.env`.
 1. Setup your environment variables in `.env` file.
    ```bash
    # your project id inside uniform dashboard:
    UNIFORM_PROJECT_ID=
-   ; # application api key (used for Optimize and UPM)
+   ; # application api key (used for Optimize and Canvas)
    UNIFORM_API_KEY=
-   ; # CLI key: needs all permissions enabled on UPM feature level
-   UPM_CLI_API_KEY=
+   ; # CLI key: needs all permissions enabled on Canvas feature level
+   CANVAS_CLI_API_KEY=
    ```
 1. Add connection tokens for your specific system you are connecting to:
 
@@ -159,7 +159,7 @@ In order to create a new webhook:
 
    > This will enable preview mode, allowing you to change composition, save and see hot reloaded composition without refreshes or publishing.
 
-1. Set the preview url under your project in uniform.app (`Settings` -> `UPM settings`) and save. This will enable the "preview" button inside the composition editor.
+1. Set the preview url under your project in uniform.app (`Settings` -> `Canvas settings`) and save. This will enable the "preview" button inside the composition editor.
    `http://localhost:4120/api/preview?secret=your-secret`
 
 # Troubleshooting

@@ -1,12 +1,12 @@
 import { compose, EnhancerBuilder } from '@uniformdev/canvas';
 import getConfig from 'next/config';
 
-import { UPM_CONTENTFUL_PARAMETER_TYPES } from '@uniformdev/canvas-contentful';
+import { CANVAS_CONTENTFUL_PARAMETER_TYPES } from '@uniformdev/canvas-contentful';
 import { contentfulEnhancer } from './contentful/contentfulEnhancer';
 import { contentfulModelConverter } from './contentful/contentfulModelConverter';
 
 import { bigCommerceEnhancer } from './bigcommerce/bigCommerceEnhancer';
-import { UPM_BIGCOMMERCE_PARAMETER_TYPES } from '@uniformdev/canvas-bigcommerce';
+import { CANVAS_BIGCOMMERCE_PARAMETER_TYPES } from '@uniformdev/canvas-bigcommerce';
 
 import { bigCommerceModelConverter } from './bigcommerce/bigCommerceModelConverter';
 
@@ -33,10 +33,10 @@ console.warn(
 
 export const enhancers = new EnhancerBuilder()
   .parameterType(
-    UPM_CONTENTFUL_PARAMETER_TYPES,
+    CANVAS_CONTENTFUL_PARAMETER_TYPES,
     contentfulConfigured ? compose(contentfulEnhancer(), contentfulModelConverter) : undefined
   )
   .parameterType(
-    UPM_BIGCOMMERCE_PARAMETER_TYPES,
+    CANVAS_BIGCOMMERCE_PARAMETER_TYPES,
     bigCommerceConfigured ? compose(bigCommerceEnhancer(), bigCommerceModelConverter) : undefined
   );
