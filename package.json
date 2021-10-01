@@ -61,7 +61,7 @@
     "@storybook/react": "^6.2.9",
     "@types/node": "^15.0.1",
     "@types/react": "^17.0.4",
-    "@uniformdev/cli": "^11.0.0",
+    "@uniformdev/cli": "^11.0.1-alpha.71",
     "autoprefixer": "^10.2.5",
     "contentful-cli": "^1.8.23",
     "cross-env": "^7.0.3",
