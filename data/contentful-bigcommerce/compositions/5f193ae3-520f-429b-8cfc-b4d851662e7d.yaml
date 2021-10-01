@@ -47,13 +47,13 @@ composition:
               parameters:
                 product:
                   type: bigcommerceProduct
-                  value: '154'
+                  value: ''
             - type: featuredProduct
               variant: secondary
               parameters:
                 product:
                   type: bigcommerceProduct
-                  value: '154'
+                  value: ''
         parameters:
           test:
             type: testSelect
@@ -68,10 +68,7 @@ composition:
             value: Cool collection
           products:
             type: bigcommerceProductList
-            value:
-              - '155'
-              - '156'
-              - '157'
+            value: []
       - type: accordion
         parameters:
           entry:
@@ -81,3 +78,5 @@ composition:
     pageTitle:
       type: text
       value: Demo product landing page
+created: '2021-09-30T23:17:41.825161+00:00'
+modified: '2021-09-30T23:17:41.825161+00:00'

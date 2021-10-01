@@ -15,10 +15,9 @@ parameters:
   - id: products
     name: Products
     type: bigcommerceProductList
-    typeConfig:
-      required: true
+    typeConfig: null
 slots: []
 titleParameter: heading
 canBeComposition: false
-created: '2021-06-30T21:36:20.598113+00:00'
-updated: '2021-08-11T16:01:30.800329+00:00'
+created: '2021-09-30T23:17:39.636943+00:00'
+updated: '2021-09-30T23:17:39.636943+00:00'
